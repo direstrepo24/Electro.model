@@ -2814,7 +2814,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -2984,15 +2984,15 @@
       ]
     },
     "runtime.native.System.Net.Security/4.3.0": {
-      "sha512": "Jno0Wmh5X/Hq5Dw7xapRMXVdBLc9KoBV5loV3gAE3Wl++/gVrIjbzC674qW6FmPQQgBgIF55yWYwVJSRsK9JkQ==",
+      "sha512": "M2nN92ePS8BgQ2oi6Jj3PlTUzadYSIWLdZrHY1n1ZcW9o4wAQQ6W+aQ2lfq1ysZQfVCgDwY58alUdowrzezztg==",
       "type": "package",
       "path": "runtime.native.system.net.security/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "runtime.native.System.Net.Security.4.3.0.nupkg.sha512",
-        "runtime.native.System.Net.Security.nuspec"
+        "runtime.native.system.net.security.4.3.0.nupkg.sha512",
+        "runtime.native.system.net.security.nuspec"
       ]
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
@@ -4317,7 +4317,7 @@
       ]
     },
     "System.Interactive.Async/3.1.1": {
-      "sha512": "hD0o7JP1NN+tYDaUymR95q/AFnjuep1Yyhai0A3yIOXgIciBi1OWhXu+uZuXjypwFTVZCtkJfaecKmmbP+wG+w==",
+      "sha512": "hZccYiIE5RS1/J9Tb/BNtosAGVggdlsJm4Ojdu+gDV0p4AIi+LUfUogMKkRacljQEJd2AG6vYzvcjhQFkqoZmw==",
       "type": "package",
       "path": "system.interactive.async/3.1.1",
       "files": [
@@ -4695,12 +4695,10 @@
       ]
     },
     "System.Net.NameResolution/4.3.0": {
-      "sha512": "Xrcotz4K5J6MdJUConyhqkjhjzlXRa5Ru8S4n+JMRrVRjONmk4ytdeW89zwuXjmmeCKnKOAvukCA5Gfb7RhGQg==",
+      "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
       "type": "package",
       "path": "system.net.nameresolution/4.3.0",
       "files": [
-        "System.Net.NameResolution.4.3.0.nupkg.sha512",
-        "System.Net.NameResolution.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4731,7 +4729,9 @@
         "runtimes/unix/lib/netstandard1.3/System.Net.NameResolution.dll",
         "runtimes/win/lib/net46/System.Net.NameResolution.dll",
         "runtimes/win/lib/netcore50/System.Net.NameResolution.dll",
-        "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll"
+        "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll",
+        "system.net.nameresolution.4.3.0.nupkg.sha512",
+        "system.net.nameresolution.nuspec"
       ]
     },
     "System.Net.Primitives/4.3.0": {
@@ -4812,12 +4812,10 @@
       ]
     },
     "System.Net.Security/4.3.0": {
-      "sha512": "PjYrz+1+M7f7WoC6EQOyT5D75e9a7GLmGOmx3RDciCxGT8q2552wo9mHw+/xIPNqjO/FjzlTOsZaULZO/ANAmA==",
+      "sha512": "IgJKNfALqw7JRWp5LMQ5SWHNKvXVz094U6wNE3c1i8bOkMQvgBL+MMQuNt3xl9Qg9iWpj3lFxPZEY6XHmROjMQ==",
       "type": "package",
       "path": "system.net.security/4.3.0",
       "files": [
-        "System.Net.Security.4.3.0.nupkg.sha512",
-        "System.Net.Security.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4848,7 +4846,9 @@
         "runtimes/unix/lib/netstandard1.6/System.Net.Security.dll",
         "runtimes/win/lib/net46/System.Net.Security.dll",
         "runtimes/win/lib/netstandard1.3/System.Net.Security.dll",
-        "runtimes/win7/lib/netcore50/_._"
+        "runtimes/win7/lib/netcore50/_._",
+        "system.net.security.4.3.0.nupkg.sha512",
+        "system.net.security.nuspec"
       ]
     },
     "System.Net.Sockets/4.3.0": {
@@ -7102,7 +7102,7 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "2YDJgLC2IS5rD1NbUecQgLTVHLVZ0YxceQd4FjlqGLRLCcHKyJ5hpgdeJUerMM1znJkM1MOYqpM3SPnSqgZ9QQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
@@ -7171,7 +7171,7 @@
       ]
     },
     "System.Xml.XPath/4.3.0": {
-      "sha512": "DKiGuAIqwSfzIYCojUTabkwWjORee9rebEbV9bXhYi+zK+DbaCkYSMHuJ8KQ3Ffmx08OkyCGsafT+KT/jlBn0w==",
+      "sha512": "v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
       "type": "package",
       "path": "system.xml.xpath/4.3.0",
       "files": [
@@ -7281,36 +7281,35 @@
     ]
   },
   "packageFolders": {
-    "/Users/torrefuertesas/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\usuario\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/torrefuertesas/dev/electro/Electro.model/Electro.model.csproj",
+      "projectUniqueName": "E:\\PROYECTOS\\DATA_TAKE\\Electrocore\\Electro.model\\Electro.model.csproj",
       "projectName": "Electro.model",
-      "projectPath": "/Users/torrefuertesas/dev/electro/Electro.model/Electro.model.csproj",
-      "packagesPath": "/Users/torrefuertesas/.nuget/packages/",
-      "outputPath": "/Users/torrefuertesas/dev/electro/Electro.model/obj/",
+      "projectPath": "E:\\PROYECTOS\\DATA_TAKE\\Electrocore\\Electro.model\\Electro.model.csproj",
+      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+      "outputPath": "E:\\PROYECTOS\\DATA_TAKE\\Electrocore\\Electro.model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/torrefuertesas/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "/Users/torrefuertesas/.dotnet/NuGetFallbackFolder": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "/Users/torrefuertesas/dev/electro/datamakerslib/datamakerslib.csproj": {
-              "projectPath": "/Users/torrefuertesas/dev/electro/datamakerslib/datamakerslib.csproj"
+            "E:\\PROYECTOS\\DATA_TAKE\\Electrocore\\datamakerslib\\datamakerslib.csproj": {
+              "projectPath": "E:\\PROYECTOS\\DATA_TAKE\\Electrocore\\datamakerslib\\datamakerslib.csproj"
             }
           }
         }

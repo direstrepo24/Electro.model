@@ -21,6 +21,8 @@ namespace Electro.model.Repository
       public interface ICiudadRepository :IEntityBaseRepository<Ciudad, long>{}  
       public interface IDepartamentoRepository :IEntityBaseRepository<Departamento, long>{} 
       public interface IMaterialRepository :IEntityBaseRepository<Material, long>{} 
-      public interface IEstadoRepository :IEntityBaseRepository<Estado, long>{}     
+      public interface IEstadoRepository :IEntityBaseRepository<Estado, long>{} 
+
+      public interface ITipoUsuarioRepository :IEntityBaseRepository<Tipo_Usuario, int>{}         
        
 }
