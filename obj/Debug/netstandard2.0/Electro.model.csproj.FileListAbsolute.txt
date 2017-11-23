@@ -1,0 +1,10 @@
+/Users/torrefuertesas/dev/electro/Electro.model/obj/Debug/netstandard2.0/Electro.model.csproj.CoreCompileInputs.cache
+/Users/torrefuertesas/dev/electro/Electro.model/obj/Debug/netstandard2.0/Electro.model.AssemblyInfoInputs.cache
+/Users/torrefuertesas/dev/electro/Electro.model/obj/Debug/netstandard2.0/Electro.model.AssemblyInfo.cs
+/Users/torrefuertesas/dev/electro/Electro.model/bin/Debug/netstandard2.0/Electro.model.deps.json
+/Users/torrefuertesas/dev/electro/Electro.model/bin/Debug/netstandard2.0/Electro.model.dll
+/Users/torrefuertesas/dev/electro/Electro.model/bin/Debug/netstandard2.0/Electro.model.pdb
+/Users/torrefuertesas/dev/electro/Electro.model/bin/Debug/netstandard2.0/datamakerslib.dll
+/Users/torrefuertesas/dev/electro/Electro.model/bin/Debug/netstandard2.0/datamakerslib.pdb
+/Users/torrefuertesas/dev/electro/Electro.model/obj/Debug/netstandard2.0/Electro.model.dll
+/Users/torrefuertesas/dev/electro/Electro.model/obj/Debug/netstandard2.0/Electro.model.pdb
