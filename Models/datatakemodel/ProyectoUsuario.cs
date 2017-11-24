@@ -7,8 +7,11 @@ namespace Electro.model.datatakemodel
     {
         public long Id{ get; set; }
         public bool IsActivo{ get; set; }
+        public long  Usuario_Id{ get; set; }
+        public long Proyecto_Id{ get; set; }
+
         [JsonIgnore]
-        public virtual Usuario usuario{ get; set; }
+        public virtual Usuario Usuario{ get; set; }
         [JsonIgnore]
         public virtual Proyecto proyecto{ get; set; }
     }

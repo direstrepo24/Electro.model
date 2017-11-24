@@ -13,7 +13,13 @@ namespace Electro.model.datatakemodel
         public string Telefono{ get; set; }
         public string Nit{ get; set; }
         public bool Is_Operadora{ get; set; }
+
+
         [JsonIgnore]
          public virtual ICollection<Proyecto_Empresa> proyectoEmpresa{ get; set; }
+
+
+        [JsonIgnore]
+        public virtual ICollection<Usuario> Usuarios{ get; set; }
     }
 }

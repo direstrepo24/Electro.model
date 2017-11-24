@@ -9,9 +9,14 @@ namespace Electro.model.datatakemodel
         public bool IsOperadora{ get; set; }
         public bool IsPropietaria{ get; set; }
         public bool IsInterventora{ get; set; }
-        [JsonIgnore]
-        public virtual Empresa empresa{ get; set; }
+        //Relaciones
+        public long Empresa_Id{ get; set; }
+        public long Proyecto_Id{ get; set; }
 
-        public long empresa_id{ get; set; }
+        [JsonIgnore]
+        public virtual Empresa Empresa{ get; set; }
+         [JsonIgnore]
+        public virtual Proyecto Proyecto{ get; set; }
+
     }
 }

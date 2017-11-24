@@ -15,14 +15,19 @@ namespace Electro.model.datatakemodel
         public DateTime FechaFin{ get; set; }
         public string OrdenTrabajo{ get; set; }
         public bool IsActivo{ get; set; }
-        [JsonIgnore]
-        public virtual Ciudad ciudad{ get; set; }
+        
+        //Relaciones
+        public long Ciudad_Id{ get; set; }
 
-        public long ciudad_id{ get; set; }
+        [JsonIgnore]
+        public virtual Ciudad Ciudad{ get; set; }
 
         [JsonIgnore]
-        public virtual ICollection<Usuario> proyectoUsuario{ get; set; }
+        public virtual ICollection<ProyectoUsuario> ProyectoUsuarios{ get; set; }
+
         [JsonIgnore]
-        public virtual ICollection<Elemento> elemento{ get; set; }
+        public virtual ICollection<Proyecto_Empresa> Proyecto_Empresa{ get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Elemento> Elementos{ get; set; }
     }
 }
