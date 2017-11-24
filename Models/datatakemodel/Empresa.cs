@@ -16,7 +16,7 @@ namespace Electro.model.datatakemodel
 
 
         [JsonIgnore]
-         public virtual ICollection<Proyecto_Empresa> proyectoEmpresa{ get; set; }
+         public virtual ICollection<Proyecto_Empresa> ProyectoEmpresas{ get; set; }
 
 
         [JsonIgnore]

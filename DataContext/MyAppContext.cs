@@ -89,7 +89,7 @@ namespace Electro.model.DataContext
 
 
              modelBuilder.Entity<Empresa>()
-             .HasMany(e => e.proyectoEmpresa)
+             .HasMany(e => e.ProyectoEmpresas)
             .WithOne(c => c.Empresa).HasForeignKey(c=>c.Empresa_Id);
 
              modelBuilder.Entity<Estado>()
@@ -130,9 +130,22 @@ namespace Electro.model.DataContext
             modelBuilder.Entity<TipoNovedad>()
                         .HasMany(e => e.detalleTipoNovedad)
                         .WithOne(c => c.tipoNovedad).HasForeignKey(c=>c.tiponovedad_id);
-modelBuilder.Entity<Departamento>()
+            modelBuilder.Entity<Departamento>()
                         .HasMany(e => e.ciudades)
                         .WithOne(c => c.departmento).HasForeignKey(c=>c.departmentoId);
+
+
+            modelBuilder.Entity<Proyecto>()
+                        .HasMany(e => e.Proyecto_Empresas)
+                        .WithOne(c => c.Proyecto).HasForeignKey(c=>c.Proyecto_Id);
+
+            modelBuilder.Entity<Empresa>()
+                        .HasMany(e => e.ProyectoEmpresas)
+                        .WithOne(c => c.Empresa).HasForeignKey(c=>c.Empresa_Id);
+
+            modelBuilder.Entity<Usuario>()
+                        .HasMany(e => e.ProyectoUsuarios)
+                        .WithOne(c => c.Usuario).HasForeignKey(c=>c.Proyecto_Id);
 
 
 
