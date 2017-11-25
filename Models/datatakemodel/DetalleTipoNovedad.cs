@@ -9,10 +9,13 @@ namespace Electro.model.datatakemodel
         public long Id{ get; set; }
         public string Nombre{ get; set; }
         public string Descripcion{ get; set; }
+
+        public long Tipo_Novedad_id{ get; set; }
+
          [JsonIgnore]
-        public virtual ICollection<Novedad> elementoNovedad{ get; set; }
+        public virtual ICollection<Novedad> Novedades{ get; set; }
          [JsonIgnore]
-        public virtual TipoNovedad tipoNovedad{ get; set; }
-        public long tiponovedad_id{ get; set; }
+        public virtual TipoNovedad TipoNovedad{ get; set; }
+       
     }
 }

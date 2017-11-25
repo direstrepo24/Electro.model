@@ -67,12 +67,12 @@ namespace Electro.model.DataContext
 
 
             modelBuilder.Entity<DetalleTipoNovedad>()
-             .HasMany(e => e.elementoNovedad)
-            .WithOne(c => c.detalleTipoNovedad).HasForeignKey(c=>c.detalletiponovedad_id);
+             .HasMany(e => e.Novedades)
+            .WithOne(c => c.DetalleTipoNovedad).HasForeignKey(c=>c.Detalle_Tipo_Novedad_Id);
 
               modelBuilder.Entity<Elemento>()
              .HasMany(e => e.novedad)
-            .WithOne(c => c.elemento).HasForeignKey(c=>c.element_id);
+            .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
  
                modelBuilder.Entity<Elemento>()
              .HasMany(e => e.localizacionElemento)
