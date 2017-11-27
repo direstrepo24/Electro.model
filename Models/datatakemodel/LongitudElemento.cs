@@ -9,7 +9,8 @@ namespace Electro.model.datatakemodel
         public long Id { get; set; }
         public long Valor { get; set; }
         public string UnidadMedida { get; set; }
+        
         [JsonIgnore]
-        public ICollection<Elemento> elemento { get; set; }
+        public ICollection<Elemento> Elementos { get; set; }
     }
 }

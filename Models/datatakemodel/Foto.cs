@@ -12,7 +12,16 @@ namespace Electro.model.datatakemodel
         public string Ruta { get; set; }
         public DateTime FechaCreacion{ get; set; }
         public string Hora{ get; set; }
+
+        //Relaciones 
+        public long Novedad_Id { get; set; }   
+        public long Elemnto_Id { get; set; }   
+
+
         [JsonIgnore]
-        public virtual Elemento elemento{ get; set; }
+        public virtual Elemento Elemnto{ get; set; }
+
+        [JsonIgnore]
+        public virtual Novedad Novedad{ get; set; }
     }
 }

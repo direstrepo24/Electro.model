@@ -7,14 +7,17 @@ namespace Electro.model.datatakemodel
     public class DetalleTipoCable:IEntityBase<long>
     {
         public long Id{ get; set; }
-        public virtual TipoCable tipoCable{ get; set; }
-        public long tipocable_id {get; set; }
+        //Relaciones
+        public long Tipocable_Id {get; set; }
+        public long Cable_Id{ get; set; }
+      
+        [JsonIgnore]
+        public virtual ICollection<ElementoCable> ElementoCable{ get; set; }
 
-        public long cable_id{ get; set; }
         [JsonIgnore]
-        public virtual Cable cable{ get; set; }
-        [JsonIgnore]
-       public virtual ICollection<ElementoCable> elementoCable{ get; set; }
+        public virtual Cable Cable{ get; set; }
+
+        public virtual TipoCable TipoCable{ get; set; }
     
     }
 }

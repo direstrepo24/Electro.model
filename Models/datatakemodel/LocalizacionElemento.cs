@@ -17,10 +17,12 @@ namespace Electro.model.datatakemodel
         public string Localidad{ get; set; }
         public string Sector{ get; set; }
         public string ReferenciaLocalizacion{ get; set; }
-        [JsonIgnore]
-        public virtual Elemento elemento{ get; set; }
+        
+        //Referencias
+        public long Element_Id{ get; set; }
 
-        public long element_id{ get; set; }
+        [JsonIgnore]
+        public virtual Elemento Elemento{ get; set; }
 
     }
 }

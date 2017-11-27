@@ -10,8 +10,8 @@ namespace Electro.model.datatakemodel
         public long Nombre{ get; set; }
         public int Sigla{ get; set; }
 
-        public bool Ismarquilla {get;set;}
+        //Relaciones
         [JsonIgnore]
-        public virtual ICollection<DetalleTipoCable> detalleTipoCable{ get; set; }
+        public virtual ICollection<DetalleTipoCable> DetalleTipoCables{ get; set; }
     }
 }

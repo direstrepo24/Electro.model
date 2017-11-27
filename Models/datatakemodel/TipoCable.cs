@@ -7,7 +7,8 @@ namespace Electro.model.datatakemodel
     {
         public long Id{ get; set; }
         public long Nombre{ get; set; }
-   
-        public ICollection<DetalleTipoCable> detalleTipoCable{ get; set; }
+
+        //Relaciones
+        public ICollection<DetalleTipoCable> DetalleTipoCables{ get; set; }
     }
 }

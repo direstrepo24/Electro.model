@@ -10,8 +10,9 @@ namespace Electro.model.datatakemodel
         public string Nombre { get; set; }
         public string Sigla { get; set; }
         public long Valor { get; set; }
+        
         [JsonIgnore]
-        public virtual ICollection<Elemento> elemento { get; set; }
+        public virtual ICollection<Elemento> Elemento { get; set; }
    
         
     }

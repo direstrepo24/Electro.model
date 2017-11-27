@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using datamakerslib.Repository;
 using Newtonsoft.Json;
 
@@ -7,7 +8,6 @@ namespace Electro.model.datatakemodel
     {
          public long Id { get; set; }
         public string Descripcion { get; set; }
-        public string Ruta_Foto { get; set; }
         public long Detalle_Tipo_Novedad_Id { get; set; }   
         public long Elemento_Id { get; set; }   
 
@@ -16,5 +16,8 @@ namespace Electro.model.datatakemodel
 
         [JsonIgnore]
         public virtual DetalleTipoNovedad DetalleTipoNovedad{ get; set; }
+
+        [JsonIgnore]
+        public virtual ICollection<Foto> Fotos{ get; set; }
     }
 }

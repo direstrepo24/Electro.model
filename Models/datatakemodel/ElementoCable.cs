@@ -8,16 +8,25 @@ namespace Electro.model.datatakemodel
     {
         public long Id{ get; set; }
         public string Codigo{ get; set; }
-        public long EmpresaId{ get; set; }
         public long Cantidad{ get; set; }
         public bool SobreRbt{ get; set; }
+        public bool Tiene_Marquilla {get;set;}
+
+        //Relaciones
+        public long Empresa_Id{ get; set; }
+        public long DetalleTipocable_Id{ get; set; }
+        public long Elemento_Id{ get; set; }
+
+        //De 1 a Muchos
         [JsonIgnore]
-        public virtual ICollection<LocalizacionCable> localizacionCable{ get; set; }
+        public virtual ICollection<LocalizacionCable> LocalizacionCables{ get; set; }
+
+        //Relacion de 1
         [JsonIgnore]
-        public virtual DetalleTipoCable detalleTipoCable{ get; set; }
-        public long detalletipocable_id{ get; set; }
+        public virtual DetalleTipoCable DetalleTipoCable{ get; set; }
+       
         [JsonIgnore]
-        public virtual Elemento elemento{ get; set; }
-        public long element_id{ get; set; }
+        public virtual Elemento Elemento{ get; set; }
+   
     }
 }

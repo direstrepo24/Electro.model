@@ -12,8 +12,13 @@ namespace Electro.model.datatakemodel
          public string LineaCable{ get; set; }
          public string Color{ get; set; }
          public string Altitud{ get; set; }
+
+
+         //Relaciones
+        public long ElementoCable_Id{ get; set; }
+
          [JsonIgnore]   
-         public virtual ElementoCable elementoCable{ get; set; }
-         public long elementocable_id{ get; set; }
+         public virtual ElementoCable ElementoCable{ get; set; }
+        
     }
 }
