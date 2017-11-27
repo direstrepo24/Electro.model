@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using datamakerslib.Repository;
+using Newtonsoft.Json;
 
 namespace Electro.model.datatakemodel
 {
@@ -9,6 +10,7 @@ namespace Electro.model.datatakemodel
         public string Nombre{ get; set; }
 
         //Relaciones
+        [JsonIgnore]
         public ICollection<DetalleTipoCable> DetalleTipoCables{ get; set; }
     }
 }

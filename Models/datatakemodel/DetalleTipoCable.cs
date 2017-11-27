@@ -16,7 +16,8 @@ namespace Electro.model.datatakemodel
 
         [JsonIgnore]
         public virtual Cable Cable{ get; set; }
-
+        
+        [JsonIgnore]
         public virtual TipoCable TipoCable{ get; set; }
     
     }
