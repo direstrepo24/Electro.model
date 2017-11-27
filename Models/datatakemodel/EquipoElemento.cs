@@ -15,9 +15,12 @@ namespace Electro.model.datatakemodel
         public long Consumo{ get; set; }
         public string UnidadMedida{ get; set; }
 
+        //Relaciones
+        public long TipoEquipo_Id{ get; set; }
+        
         [JsonIgnore]
-        public virtual TipoEquipo tipoEquipo{ get; set; }
+        public virtual TipoEquipo TipoEquipo{ get; set; }
 
-        public long tipoequipo_id{ get; set; }
+        
     }
 }

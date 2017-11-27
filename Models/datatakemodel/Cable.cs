@@ -7,8 +7,8 @@ namespace Electro.model.datatakemodel
     public class Cable:IEntityBase<long>
     {
         public long Id{ get; set; }
-        public long Nombre{ get; set; }
-        public int Sigla{ get; set; }
+        public string Nombre{ get; set; }
+        public string Sigla{ get; set; }
 
         //Relaciones
         [JsonIgnore]

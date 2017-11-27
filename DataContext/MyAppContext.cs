@@ -124,8 +124,8 @@ namespace Electro.model.DataContext
 
 
             modelBuilder.Entity<TipoEquipo>()
-                        .HasMany(e => e.equipoElemento)
-                        .WithOne(c => c.tipoEquipo).HasForeignKey(c=>c.tipoequipo_id);
+                        .HasMany(e => e.EquipoElemento)
+                        .WithOne(c => c.TipoEquipo).HasForeignKey(c=>c.TipoEquipo_Id);
 //TipoNovedad
             modelBuilder.Entity<TipoNovedad>()
                         .HasMany(e => e.DetalleTipoNovedades)
