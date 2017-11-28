@@ -15,7 +15,7 @@ namespace Electro.model.datatakemodel
         public string HoraFin{ get; set; }
         public string ResistenciaMecanica{ get; set; }
         public long Retenidas{ get; set; }
-        public long AlturaDisponible{ get; set; }
+        public double AlturaDisponible{ get; set; }
 
         //Relaciones
         public long Usuario_Id{ get; set; }
@@ -32,9 +32,6 @@ namespace Electro.model.datatakemodel
         public virtual ICollection<ElementoCable> Cables{ get; set; }
 
         //Relacion de 1
-       
-       
-     
         [JsonIgnore]
         public virtual Proyecto Proyecto{ get; set; }
          [JsonIgnore]

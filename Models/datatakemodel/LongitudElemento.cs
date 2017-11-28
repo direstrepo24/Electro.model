@@ -7,7 +7,7 @@ namespace Electro.model.datatakemodel
     public class LongitudElemento:IEntityBase<long>
     {
         public long Id { get; set; }
-        public long Valor { get; set; }
+        public double Valor { get; set; }
         public string UnidadMedida { get; set; }
         
         [JsonIgnore]
