@@ -30,6 +30,7 @@ namespace Electro.model.datatakemodel
         public virtual ICollection<Perdida> Perdidas{ get; set; }
         public virtual ICollection<LocalizacionElemento> LocalizacionElementos{ get; set; }
         public virtual ICollection<ElementoCable> Cables{ get; set; }
+        public virtual ICollection<EquipoElemento> Equipos{ get; set; }
 
         //Relacion de 1
         [JsonIgnore]

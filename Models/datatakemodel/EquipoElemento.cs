@@ -17,10 +17,13 @@ namespace Electro.model.datatakemodel
 
         //Relaciones
         public long TipoEquipo_Id{ get; set; }
+        public long Elemento_Id {get; set;}
         
         [JsonIgnore]
         public virtual TipoEquipo TipoEquipo{ get; set; }
-
+        
+         [JsonIgnore]
+        public virtual Elemento Elemento{ get; set; }
         
     }
 }

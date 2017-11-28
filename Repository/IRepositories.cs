@@ -48,7 +48,7 @@ namespace Electro.model.Repository
       public interface  IDetalleTipoCableRepository:IEntityBaseRepository<DetalleTipoCable, long>{}
 
 
-      //ASync Post
+      //Async Post
       public interface  IElementoRepository:IEntityBaseRepository<Elemento, long>{}
       public interface  IElementoCableRepository:IEntityBaseRepository<ElementoCable, long>{}
       public interface  IEquipoElementoRepository:IEntityBaseRepository<EquipoElemento, long>{}

@@ -15,7 +15,7 @@ namespace Electro.model.datatakemodel
 
         //Relaciones 
         public long? Novedad_Id { get; set; }   
-        public long Elemnto_Id { get; set; }   
+        public long Elemento_Id { get; set; }   
 
         [JsonIgnore]
         public virtual Elemento Elemnto{ get; set; }
