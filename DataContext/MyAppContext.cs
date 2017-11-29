@@ -74,7 +74,7 @@ namespace Electro.model.DataContext
              .HasMany(e => e.Novedades)
             .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
  
-               modelBuilder.Entity<Elemento>()
+            modelBuilder.Entity<Elemento>()
              .HasMany(e => e.LocalizacionElementos)
             .WithOne(c => c.Elemento).HasForeignKey(c=>c.Element_Id);
 

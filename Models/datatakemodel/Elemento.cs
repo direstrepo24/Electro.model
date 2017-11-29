@@ -26,10 +26,15 @@ namespace Electro.model.datatakemodel
         public long Nivel_Tension_Id{ get; set; }
 
         //Relacion de muchos
+        [JsonIgnore]
         public virtual ICollection<Novedad> Novedades{ get; set; }
+        [JsonIgnore]
         public virtual ICollection<Perdida> Perdidas{ get; set; }
+        [JsonIgnore]
         public virtual ICollection<LocalizacionElemento> LocalizacionElementos{ get; set; }
+        [JsonIgnore]
         public virtual ICollection<ElementoCable> Cables{ get; set; }
+        [JsonIgnore]
         public virtual ICollection<EquipoElemento> Equipos{ get; set; }
 
         //Relacion de 1
