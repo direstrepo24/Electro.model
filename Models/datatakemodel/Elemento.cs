@@ -24,6 +24,7 @@ namespace Electro.model.datatakemodel
         public long Material_Id{ get; set; }
         public long Proyecto_Id{ get; set; }
         public long Nivel_Tension_Id{ get; set; }
+        public long Ciudad_Id{ get; set; }
 
         //Relacion de muchos
         [JsonIgnore]

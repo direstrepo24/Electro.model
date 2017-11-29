@@ -151,6 +151,16 @@ namespace Electro.model.DataContext
                         .HasMany(e => e.DetalleTipoNovedades)
                         .WithOne(c => c.TipoNovedad).HasForeignKey(c=>c.Tipo_Novedad_id);
 
+                          modelBuilder.Entity<Tipo_Usuario>()
+                        .HasMany(e => e.Usuarios)
+                        .WithOne(c => c.Tipo_Usuario).HasForeignKey(c=>c.Tipo_Usuario_Id);
+
+                          modelBuilder.Entity<Empresa>()
+                        .HasMany(e => e.Usuarios)
+                        .WithOne(c => c.Empresa).HasForeignKey(c=>c.Empresa_Id);
+
+
+
 
 
              modelBuilder.Entity<Cable>().HasKey(m=>m.Id);
