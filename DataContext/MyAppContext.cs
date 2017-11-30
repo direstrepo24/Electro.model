@@ -57,14 +57,13 @@ namespace Electro.model.DataContext
              .HasMany(e => e.DetalleTipoCables)
             .WithOne(c => c.Cable).HasForeignKey(c=>c.Cable_Id);
 
-             modelBuilder.Entity<Ciudad>()
+            modelBuilder.Entity<Ciudad>()
              .HasMany(e => e.proyecto)
             .WithOne(c => c.Ciudad).HasForeignKey(c=>c.Ciudad_Id);
 
-              modelBuilder.Entity<DetalleTipoCable>()
+            modelBuilder.Entity<DetalleTipoCable>()
              .HasMany(e => e.ElementoCable)
             .WithOne(c => c.DetalleTipoCable).HasForeignKey(c=>c.DetalleTipocable_Id);
-
 
             modelBuilder.Entity<DetalleTipoNovedad>()
              .HasMany(e => e.Novedades)
@@ -117,6 +116,9 @@ namespace Electro.model.DataContext
              .HasMany(e => e.Elementos)
             .WithOne(c => c.Proyecto).HasForeignKey(c=>c.Proyecto_Id);
 
+        
+
+
 
             modelBuilder.Entity<TipoCable>()
                         .HasMany(e => e.DetalleTipoCables)
@@ -145,7 +147,7 @@ namespace Electro.model.DataContext
 
             modelBuilder.Entity<Usuario>()
                         .HasMany(e => e.ProyectoUsuarios)
-                        .WithOne(c => c.Usuario).HasForeignKey(c=>c.Proyecto_Id);
+                        .WithOne(c => c.Usuario).HasForeignKey(c=>c.Usuario_Id);
 
                          modelBuilder.Entity<TipoNovedad>()
                         .HasMany(e => e.DetalleTipoNovedades)

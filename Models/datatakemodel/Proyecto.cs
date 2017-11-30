@@ -22,7 +22,7 @@ namespace Electro.model.datatakemodel
         [JsonIgnore]
         public virtual Ciudad Ciudad{ get; set; }
 
-        [JsonIgnore]
+        ///[JsonIgnore]
         public virtual ICollection<ProyectoUsuario> ProyectoUsuarios{ get; set; }
 
         [JsonIgnore]
