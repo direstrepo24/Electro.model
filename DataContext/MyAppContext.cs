@@ -117,14 +117,9 @@ namespace Electro.model.DataContext
              .HasMany(e => e.Elementos)
             .WithOne(c => c.Proyecto).HasForeignKey(c=>c.Proyecto_Id);
 
-        
-
-
-
             modelBuilder.Entity<TipoCable>()
                         .HasMany(e => e.DetalleTipoCables)
                         .WithOne(c => c.TipoCable).HasForeignKey(c=>c.Tipocable_Id);
-
 
             modelBuilder.Entity<TipoEquipo>()
                         .HasMany(e => e.EquipoElemento)
@@ -162,25 +157,33 @@ namespace Electro.model.DataContext
                         .HasMany(e => e.Usuarios)
                         .WithOne(c => c.Empresa).HasForeignKey(c=>c.Empresa_Id);
 
-                        modelBuilder.Entity<Novedad>()
-                        .HasMany(e => e.Fotos)
-                        .WithOne(c => c.Novedad).HasForeignKey(c=>c.Novedad_Id);
+                        
 
                         //Perdidas
                         
-                         modelBuilder.Entity<Elemento>()
+                        modelBuilder.Entity<Elemento>()
                         .HasMany(e => e.Perdidas)
-                        .WithOne(c => c.elemento).HasForeignKey(c=>c.Elemento_Id);
+                        .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
 
-                         modelBuilder.Entity<Tipo_Perdida>()
+                        modelBuilder.Entity<Tipo_Perdida>()
                         .HasMany(e => e.Perdidas)
                         .WithOne(c => c.Tipo_Perdida).HasForeignKey(c=>c.Tipo_Perdida_Id);
 
+                         modelBuilder.Entity<Elemento>()
+                        .HasMany(e => e.Equipos)
+                        .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
+
+                            modelBuilder.Entity<Elemento>()
+                        .HasMany(e => e.Fotos)
+                        .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
+
+                          
+
+                           
 
 
 
-
-
+                        
              modelBuilder.Entity<Cable>().HasKey(m=>m.Id);
              modelBuilder.Entity<Ciudad>().HasKey(m=>m.Id);
              modelBuilder.Entity<Departamento>().HasKey(m=>m.Id);

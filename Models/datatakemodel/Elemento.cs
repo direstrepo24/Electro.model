@@ -39,6 +39,9 @@ namespace Electro.model.datatakemodel
         [JsonIgnore]
         public virtual ICollection<EquipoElemento> Equipos{ get; set; }
 
+        [JsonIgnore]
+        public virtual ICollection<Foto> Fotos{ get; set; }
+
         //Relacion de 1
         [JsonIgnore]
         public virtual Proyecto Proyecto{ get; set; }

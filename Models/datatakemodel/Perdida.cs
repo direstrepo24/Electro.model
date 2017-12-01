@@ -1,5 +1,6 @@
 using datamakerslib.Repository;
 using Electro.model.Models.datatakemodel;
+using Newtonsoft.Json;
 
 namespace Electro.model.datatakemodel
 {
@@ -15,7 +16,11 @@ namespace Electro.model.datatakemodel
         //Relaciones
         public long Elemento_Id {get;set;}
         public long Tipo_Perdida_Id {get;set;}
-        public virtual Elemento elemento {get;set;}
+
+        [JsonIgnore]
+        public virtual Elemento Elemento {get;set;}
+
+        [JsonIgnore]
         public virtual Tipo_Perdida Tipo_Perdida {get;set;}
     }
 }
