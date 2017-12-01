@@ -167,7 +167,7 @@ namespace Electro.model.DataContext
                         .WithOne(c => c.Novedad).HasForeignKey(c=>c.Novedad_Id);
 
                         //Perdidas
-
+                        
                          modelBuilder.Entity<Elemento>()
                         .HasMany(e => e.Perdidas)
                         .WithOne(c => c.elemento).HasForeignKey(c=>c.Elemento_Id);
