@@ -3,6 +3,7 @@ using datamakerslib.DataContext;
 using Electro.model.datatakemodel;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Electro.model.Models.datatakemodel;
 
 namespace Electro.model.DataContext
 {
@@ -164,6 +165,16 @@ namespace Electro.model.DataContext
                         modelBuilder.Entity<Novedad>()
                         .HasMany(e => e.Fotos)
                         .WithOne(c => c.Novedad).HasForeignKey(c=>c.Novedad_Id);
+
+                        //Perdidas
+
+                         modelBuilder.Entity<Elemento>()
+                        .HasMany(e => e.Perdidas)
+                        .WithOne(c => c.elemento).HasForeignKey(c=>c.Elemento_Id);
+
+                         modelBuilder.Entity<Tipo_Perdida>()
+                        .HasMany(e => e.Perdidas)
+                        .WithOne(c => c.Tipo_Perdida).HasForeignKey(c=>c.Tipo_Perdida_Id);
 
 
 
