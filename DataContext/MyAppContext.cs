@@ -181,8 +181,6 @@ namespace Electro.model.DataContext
 
                            
 
-
-
                         
              modelBuilder.Entity<Cable>().HasKey(m=>m.Id);
              modelBuilder.Entity<Ciudad>().HasKey(m=>m.Id);
