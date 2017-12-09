@@ -19,7 +19,7 @@ namespace Electro.model.datatakemodel
         //Relaciones
         public long EmpresaId{ get; set; }
         public long Ciudad_Id{ get; set; }
-        public long Ciudad_Empresa_Id{ get; set; }
+        public long? Ciudad_Empresa_Id{ get; set; }
         public long TipoEquipo_Id{ get; set; }
         public long Elemento_Id {get; set;}
         
