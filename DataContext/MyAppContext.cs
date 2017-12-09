@@ -180,15 +180,15 @@ namespace Electro.model.DataContext
                         .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
 
                         //Ciudad empresa
-                         modelBuilder.Entity<Ciudad_Empresa>()
-                        .HasMany(e => e.EquipoElementos)
-                        .WithOne(c => c.Ciudad_Empresa).HasForeignKey(c=>c.Ciudad_Empresa_Id);
-
+                        
                         modelBuilder.Entity<Ciudad_Empresa>()
                         .HasMany(e => e.ElementoCables)
                         .WithOne(c => c.Ciudad_Empresa).HasForeignKey(c=>c.Ciudad_Empresa_Id);
 
-                       
+                        modelBuilder.Entity<Ciudad_Empresa>()
+                        .HasMany(e => e.EquipoElementos)
+                        .WithOne(c => c.Ciudad_Empresa).HasForeignKey(c=>c.Ciudad_Empresa_Id);
+
 
                         modelBuilder.Entity<Ciudad>()
                         .HasMany(e => e.Ciudad_Empresas)
