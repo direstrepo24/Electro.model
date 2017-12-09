@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using datamakerslib.Repository;
+using Electro.model.Models.datatakemodel;
 using Newtonsoft.Json;
 
 namespace Electro.model.datatakemodel
@@ -14,5 +15,8 @@ namespace Electro.model.datatakemodel
         
         [JsonIgnore]
         public virtual ICollection<Proyecto> proyecto { get; set; }
+
+        [JsonIgnore]
+        public virtual ICollection<Ciudad_Empresa> Ciudad_Empresas { get; set; }
     }
 }

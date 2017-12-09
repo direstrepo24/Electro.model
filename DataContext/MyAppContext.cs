@@ -42,6 +42,8 @@ namespace Electro.model.DataContext
        public DbSet<Usuario> Usuario{get;set;}
        public DbSet<Dispositivo> Dispositivo{get;set;}
        public DbSet<Perdida> Perdida{get;set;}
+        public DbSet<Ciudad_Empresa> Ciudad_Empresa{get;set;}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             /*  builder.Entity<User>()
@@ -177,6 +179,28 @@ namespace Electro.model.DataContext
                         .HasMany(e => e.Fotos)
                         .WithOne(c => c.Elemento).HasForeignKey(c=>c.Elemento_Id);
 
+                        //Ciudad empresa
+                         modelBuilder.Entity<Ciudad_Empresa>()
+                        .HasMany(e => e.EquipoElementos)
+                        .WithOne(c => c.Ciudad_Empresa).HasForeignKey(c=>c.Ciudad_Empresa_Id);
+
+                        modelBuilder.Entity<Ciudad_Empresa>()
+                        .HasMany(e => e.ElementoCables)
+                        .WithOne(c => c.Ciudad_Empresa).HasForeignKey(c=>c.Ciudad_Empresa_Id);
+
+                       
+
+                        modelBuilder.Entity<Ciudad>()
+                        .HasMany(e => e.Ciudad_Empresas)
+                        .WithOne(c => c.Ciudad).HasForeignKey(c=>c.Ciudad_Id);
+
+                        modelBuilder.Entity<Empresa>()
+                        .HasMany(e => e.Ciudad_Empresas)
+                        .WithOne(c => c.Empresa).HasForeignKey(c=>c.Empresa_Id);
+
+                      
+
+
                           
 
                            
@@ -208,6 +232,7 @@ namespace Electro.model.DataContext
             modelBuilder.Entity<TipoNovedad>().HasKey(m=>m.Id);
             modelBuilder.Entity<Usuario>().HasKey(m=>m.Id);
             modelBuilder.Entity<Perdida>().HasKey(m=>m.Id);
+             modelBuilder.Entity<Ciudad_Empresa>().HasKey(m=>m.Id);
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -57,4 +57,7 @@ namespace Electro.model.Repository
       public interface  ILocalizacionElementoRepository:IEntityBaseRepository<LocalizacionElemento, long>{}
       public interface  IFotoRepository:IEntityBaseRepository<Foto, long>{}
 
+      //Ciudad Empresa
+      public interface  ICiudad_EmpresaRepository:IEntityBaseRepository<Ciudad_Empresa, long>{}
+
 }
