@@ -21,8 +21,11 @@ namespace Electro.model.DataContext
         public DbSet<DetalleTipoCable> DetalleTipoCable{get;set;}
         public DbSet<DetalleTipoNovedad> DetalleTipoNovedad{get;set;}
         public DbSet<Elemento> Elemento{get;set;}
-        public DbSet<ElementoCable> ElementoCable{get;set;}
         public DbSet<Empresa> Empresa{get;set;}
+        public DbSet<ElementoCable> ElementoCable{get;set;}
+        
+        public DbSet<Ciudad_Empresa> Ciudad_Empresa{get;set;}
+     
         public DbSet<EquipoElemento> EquipoElemento{get;set;}
         public DbSet<Estado> Estado{get;set;}
         public DbSet<Foto> Foto{get;set;}
@@ -42,7 +45,6 @@ namespace Electro.model.DataContext
        public DbSet<Usuario> Usuario{get;set;}
        public DbSet<Dispositivo> Dispositivo{get;set;}
        public DbSet<Perdida> Perdida{get;set;}
-        public DbSet<Ciudad_Empresa> Ciudad_Empresa{get;set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -130,6 +132,7 @@ namespace Electro.model.DataContext
             modelBuilder.Entity<TipoNovedad>()
                         .HasMany(e => e.DetalleTipoNovedades)
                         .WithOne(c => c.TipoNovedad).HasForeignKey(c=>c.Tipo_Novedad_id);
+                        
             modelBuilder.Entity<Departamento>()
                         .HasMany(e => e.ciudades)
                         .WithOne(c => c.departmento).HasForeignKey(c=>c.departmentoId);
@@ -207,15 +210,16 @@ namespace Electro.model.DataContext
 
 
 
-                        
+            
              modelBuilder.Entity<Cable>().HasKey(m=>m.Id);
              modelBuilder.Entity<Ciudad>().HasKey(m=>m.Id);
              modelBuilder.Entity<Departamento>().HasKey(m=>m.Id);
              modelBuilder.Entity<DetalleTipoCable>().HasKey(m=>m.Id);
              modelBuilder.Entity<DetalleTipoNovedad>().HasKey(m=>m.Id);
             modelBuilder.Entity<Elemento>().HasKey(m=>m.Id);
-           modelBuilder.Entity<ElementoCable>().HasKey(m=>m.Id);
            modelBuilder.Entity<Empresa>().HasKey(m=>m.Id);
+           modelBuilder.Entity<Ciudad_Empresa>().HasKey(m=>m.Id);
+           modelBuilder.Entity<ElementoCable>().HasKey(m=>m.Id);
            modelBuilder.Entity<EquipoElemento>().HasKey(m=>m.Id);
            modelBuilder.Entity<Estado>().HasKey(m=>m.Id);
            modelBuilder.Entity<Foto>().HasKey(m=>m.Id);
@@ -232,7 +236,7 @@ namespace Electro.model.DataContext
             modelBuilder.Entity<TipoNovedad>().HasKey(m=>m.Id);
             modelBuilder.Entity<Usuario>().HasKey(m=>m.Id);
             modelBuilder.Entity<Perdida>().HasKey(m=>m.Id);
-             modelBuilder.Entity<Ciudad_Empresa>().HasKey(m=>m.Id);
+         
             base.OnModelCreating(modelBuilder);
         }
     }
