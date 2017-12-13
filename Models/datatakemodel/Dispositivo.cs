@@ -30,6 +30,6 @@ namespace Electro.model.datatakemodel
          [JsonIgnore]
          public virtual Usuario Usuario{get;set;}
 
-         public long? userId {get;set;}
+         public long? UsuarioId {get;set;}
     }
 }
