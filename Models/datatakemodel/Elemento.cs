@@ -17,6 +17,7 @@ namespace Electro.model.datatakemodel
         public long Retenidas{ get; set; }
         public double AlturaDisponible{ get; set; }
         public long Ciudad_Id{ get; set; }
+        public string Imei_Device{ get; set; }
     
         //Relaciones
         public long Usuario_Id{ get; set; }
