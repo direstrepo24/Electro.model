@@ -9,6 +9,8 @@ namespace Electro.model.datatakemodel
 
          public string Imei{ get; set; }
 
+         public string Phone_Type_Device{ get; set; }
+
          public string Android_Id{ get; set; }
 
          public string Software_Version{ get; set; }
@@ -28,6 +30,6 @@ namespace Electro.model.datatakemodel
          [JsonIgnore]
          public virtual Usuario Usuario{get;set;}
 
-         public long userId{get;set;}
+         public long? userId {get;set;}
     }
 }
