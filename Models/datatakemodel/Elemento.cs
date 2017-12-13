@@ -18,6 +18,7 @@ namespace Electro.model.datatakemodel
         public double AlturaDisponible{ get; set; }
         public long Ciudad_Id{ get; set; }
         public string Imei_Device{ get; set; }
+        public string Token_Elemento{ get; set; }
     
         //Relaciones
         public long Usuario_Id{ get; set; }
