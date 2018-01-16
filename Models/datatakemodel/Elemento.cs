@@ -61,6 +61,9 @@ namespace Electro.model.datatakemodel
         [JsonIgnore]
         public virtual NivelTensionElemento NivelTensionElemento { get; set; }
 
+        [JsonIgnore]
+        public virtual Ciudad Ciudad { get; set; }
+
 
     }
 }

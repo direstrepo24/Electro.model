@@ -201,6 +201,10 @@ namespace Electro.model.DataContext
                         .HasMany(e => e.Ciudad_Empresas)
                         .WithOne(c => c.Empresa).HasForeignKey(c=>c.Empresa_Id);
 
+                          modelBuilder.Entity<Ciudad>()
+                        .HasMany(e => e.Elementos)
+                        .WithOne(c => c.Ciudad).HasForeignKey(c=>c.Ciudad_Id);
+
                       
 
 
