@@ -9,12 +9,51 @@ namespace Electro.model.DataContext
 {
     public class MyAppContext: EntityContextBase<MyAppContext>
     {
+
+        #region Atributes
+        static DbContextOptions<MyAppContext> optionsLocal;
+        static MyAppContext instance;
+
+        #endregion
+
+        #region Singleton
+        public static MyAppContext GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new MyAppContext();
+            }
+
+            return instance;
+        }
+        #endregion
+
+
+        #region constructor
+       // public MyAppContext(DbContextOptions<MyAppContext> options) : base(options)
+       //{}
         public MyAppContext(DbContextOptions<MyAppContext> options) : base(options)
-        { }
+        {
+            optionsLocal=options;
+        }
+
+        public MyAppContext() : base(optionsLocal)
+        {
+
+
+        }
+
+        #endregion
+
+
         ///colocar las clases
         //public DbSet<Lectura> Lecturas { get; set; }
         //public DbSet<Medidor> medidor {get;set;}
         //public DbSet<User> user{get;set;}
+
+        public virtual DbSet<View_Elemento_Report> View_Elementos { get; set; }
+        public virtual DbSet<View_Cable_Report> View_Cables { get; set; }
+
         public DbSet<Cable> Cable{get;set;}
         public DbSet<Ciudad> Ciudad{get;set;}
         public DbSet<Departamento> Departamento{get;set;}
@@ -240,6 +279,9 @@ namespace Electro.model.DataContext
             modelBuilder.Entity<TipoNovedad>().HasKey(m=>m.Id);
             modelBuilder.Entity<Usuario>().HasKey(m=>m.Id);
             modelBuilder.Entity<Perdida>().HasKey(m=>m.Id);
+
+            modelBuilder.Entity<View_Elemento_Report>(entity => { entity.HasKey(e => e.Id); });
+            modelBuilder.Entity<View_Cable_Report>(entity => { entity.HasKey(e => e.Id); });
          
             base.OnModelCreating(modelBuilder);
         }
