@@ -3,11 +3,33 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Electro.model.Models.datatakemodel
 {
-    [Table("view_elementos_report")]
-    public class View_Elemento_Report
+    [Table("view_novedad_elemento_report")]
+    public class View_Novedad_Elemento_Report
     {
+
+        //Propereties Novedad
+        [Column("novedad_id")]
+        public long Novedad_Id { get; set; }
+
+        [Column("nombre_tipo_novedad")]
+        public string Nombre_Tipo_Novedad { get; set; }
+
+        [Column("nombre_detalle_tipo_novedad")]
+        public string Nombre_Detalle_Tipo_Novedad { get; set; }
+
+        [Column("tipo_novedad_id")]
+        public long Tipo_Novedad_id { get; set; }
+
+        [Column("descripcion_novedad")]
+        public string Descripcion_Novedad { get; set; }
+
+        [Column("detalle_tipo_novedad_id")]
+        public long Detalle_Tipo_Novedad_Id { get; set; }
+
+
+        //Properties Elemento
         [Column("elemento_id")]
-        public long Id { get; set; }
+        public long Elemento_Id { get; set; }
 
         [Column("codigoapoyo")]
         public string CodigoApoyo { get; set; }
@@ -122,7 +144,5 @@ namespace Electro.model.Models.datatakemodel
         public string Direccion_Gps { get; set; }
        
         
-       
-       
     }
 }

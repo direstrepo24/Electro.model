@@ -53,6 +53,7 @@ namespace Electro.model.DataContext
 
         public virtual DbSet<View_Elemento_Report> View_Elementos { get; set; }
         public virtual DbSet<View_Cable_Report> View_Cables { get; set; }
+        public virtual DbSet<View_Novedad_Elemento_Report> View_Novedades { get; set; }
 
         public DbSet<Cable> Cable{get;set;}
         public DbSet<Ciudad> Ciudad{get;set;}
@@ -282,6 +283,7 @@ namespace Electro.model.DataContext
 
             modelBuilder.Entity<View_Elemento_Report>(entity => { entity.HasKey(e => e.Id); });
             modelBuilder.Entity<View_Cable_Report>(entity => { entity.HasKey(e => e.Id); });
+            modelBuilder.Entity<View_Novedad_Elemento_Report>(entity => { entity.HasKey(e => e.Novedad_Id); });
          
             base.OnModelCreating(modelBuilder);
         }
