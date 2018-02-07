@@ -20,6 +20,7 @@ namespace Electro.model.datatakemodel
 
         public long DetalleTipocable_Id{ get; set; }
         public long Elemento_Id{ get; set; }
+        public bool Is_Enabled_Data {get; set;}
 
         //De 1 a Muchos
         [JsonIgnore]

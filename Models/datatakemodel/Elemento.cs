@@ -33,6 +33,8 @@ namespace Electro.model.datatakemodel
 
         public string Hora_Sincronizacion {get; set;}
 
+        public bool Is_Enabled_Data {get; set;}
+
 
         //Relacion de muchos
         [JsonIgnore]
