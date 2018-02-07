@@ -52,6 +52,9 @@ namespace Electro.model.Models.datatakemodel
         [Column("hora_sincronizacion")]
         public string Hora_Sincronizacion {get; set;}
 
+        [Column("is_enabled_data")]
+        public string Is_Enabled_Data {get; set;}
+
         [Column("horafin")]
         public string HoraFin { get; set; }
 
